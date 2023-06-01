@@ -6,7 +6,7 @@
 
 # computational content generation, web scraping
 
-- some bullet point
+- [scom-gpols](https://nils-holmberg.github.io/ccg-web/web/scom-gpols.html)
 
 ---
 
