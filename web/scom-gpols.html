@@ -3063,7 +3063,7 @@ vertical-align: -.125em;
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load dataset</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>fn <span class="ot">=</span> <span class="st">&quot;../csv/data.tsv&quot;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>fn <span class="ot">=</span> <span class="st">&quot;../csv/scom-gpols.tsv&quot;</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>dt2 <span class="ot">=</span> <span class="fu">read.table</span>(fn, <span class="at">sep=</span><span class="st">&#39;</span><span class="sc">\t</span><span class="st">&#39;</span>, <span class="at">header=</span>F, <span class="at">quote=</span><span class="st">&quot;&quot;</span>, <span class="at">strip.white=</span><span class="cn">TRUE</span>, <span class="at">stringsAsFactors=</span><span class="cn">FALSE</span>, <span class="at">comment.char=</span><span class="fu">c</span>(<span class="st">&quot;|&quot;</span>))</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># get id col</span></span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>dt2 <span class="ot">=</span> dt2 <span class="sc">|&gt;</span> <span class="fu">as_tibble</span>() <span class="sc">|&gt;</span> <span class="fu">rename</span>(<span class="at">id=</span>V1)</span>
@@ -3103,7 +3103,7 @@ vertical-align: -.125em;
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># left join</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>dt3 <span class="ot">=</span> <span class="fu">left_join</span>(dt1, dt2, <span class="at">by=</span><span class="fu">c</span>(<span class="st">&quot;id&quot;</span>)) <span class="sc">|&gt;</span> <span class="fu">as_tibble</span>() <span class="sc">|&gt;</span> <span class="fu">rename</span>(<span class="at">image=</span>V1, <span class="at">text=</span>V2)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># write data</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>fn <span class="ot">=</span> <span class="st">&quot;../csv/data.csv&quot;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>fn <span class="ot">=</span> <span class="st">&quot;../csv/scom-gpols.csv&quot;</span></span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">write.table</span>(dt3, fn, <span class="at">sep=</span><span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quot=</span>T, <span class="at">row.names=</span>F)</span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>dt3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
